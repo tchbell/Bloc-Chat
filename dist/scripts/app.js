@@ -7,17 +7,15 @@
         });
         
         $stateProvider
-            .state('home', {
+            .state('landing', {
             url:'/',
-            templateUrl:'/templates/pages.html'
+            templateUrl:'/templates/landing.html'
         });
     }
     
     
-    
     angular
-        .module('blocChat', ['ui-router', 'firebase'])
+        .module('blocChat', ['ui.router', 'firebase'])
         .config(config);
-    
     
 })();
