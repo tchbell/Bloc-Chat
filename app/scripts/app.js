@@ -9,11 +9,14 @@
         $stateProvider
             .state('home',{
             url:'/',
+            controller: 'RoomCtrl',
+            controllerAs: 'room',
             templateUrl:'/templates/home.html'
         });
         
-        
+
     }
+    
     
     
     angular
