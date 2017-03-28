@@ -1,0 +1,19 @@
+body{
+    width:100%;
+    
+}
+
+.mainHeadLine{
+    text-align:center;
+    
+}
+
+.mainBtn{
+    margin:0 auto;
+    display:block;
+    padding:5px;
+}
+
+.mainBtnLink{
+    text-decoration:none;
+}
