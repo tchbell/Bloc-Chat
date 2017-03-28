@@ -1,5 +1,5 @@
 <section class="main">
-<h1 class="modal-header">Bloc Chat</h1>
+<h1 class="mainHeader">Bloc Chat</h1>
 <button ng-click = "room.open('sm')">New Chat Room</button>
-<div ng-repeat="room in room.rooms">Chat Room {{$index+1}}</div>
+<div ng-repeat="room in room.rooms">{{room.$id}} {{$index+1}}</div>
 </section>

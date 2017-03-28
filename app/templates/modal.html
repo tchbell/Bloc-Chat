@@ -1,11 +1,15 @@
-<!-- why does this ctrl work but not on app.js-->
-<div class="modal" ng-controller="RoomCtrl as room">
+
+<!--
+<div class="modal" ng-controller = "ModalCtrl as modal">
+-->
         <div class="modal-header">
             <h2 class="modal-title">Create new chat room</h2>
         </div>
         <div class="modal-body">
             Enter Room Name
-            <input type="text" placeholder="Chat Room Name"/>
-            <button type="submit" ng-click="room.roomAdd()">Submit</button>
+            <input type="text"  ng-model="modal.roomName" placeholder="Chat Room Name"/>
+            <button type="submit" ng-click="modal.roomAdd()">Submit</button>
         </div>
+<!--
 </div>
+-->

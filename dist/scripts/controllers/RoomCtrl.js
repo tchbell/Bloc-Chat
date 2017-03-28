@@ -4,12 +4,13 @@
         this.roomAdd = Room.roomAdd;
         
         
-        this.animationsEnabled = true;
         
         //open modal window to create new chat room
          this.open = function (size) {
              var modalInstance = $uibModal.open({
                  templateUrl: '/templates/modal.html',
+                 controller:'ModalCtrl',
+                 controllerAs:'modal',
                  size: size,
                  resolve: {
                      items: function () {
@@ -18,7 +19,7 @@
                 }
              })
         };
-    }
+};
 
     
     angular
