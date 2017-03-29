@@ -3,6 +3,8 @@
         this.rooms = Room.all;
         this.roomAdd = Room.roomAdd;
         
+        console.log(this.rooms)
+        
         
         
         //open modal window to create new chat room

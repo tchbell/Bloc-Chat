@@ -8,7 +8,7 @@
             all: rooms,
             
             roomAdd: function(){
-                rooms.$add({room4: "room4"}).then(function(ref) {
+                rooms.$add({room: this.roomName}).then(function(ref) {
                     var id = ref.key;
                     console.log("added record with id " + id);
                     rooms.$indexFor(id);
