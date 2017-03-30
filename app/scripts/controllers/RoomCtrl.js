@@ -2,8 +2,8 @@
     function RoomCtrl(Room, $uibModal, $log, $document) {
         this.rooms = Room.all;
         this.roomAdd = Room.roomAdd;
+        this.selectedRoom="None Selected";
         
-        console.log(this.rooms)
         
         
         

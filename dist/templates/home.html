@@ -1,5 +1,14 @@
 <section class="main">
-<h1 class="mainHeader">Bloc Chat</h1>
-<button ng-click = "room.open('sm')">New Chat Room</button>
-<div ng-repeat="room in room.rooms">{{room.room}}</div>
+    <h1 class="mainHeader">Bloc Chat</h1>
+        <div class="chatRooms">
+        <button ng-click = "room.open('sm')" class="chatBtn">New Chat Room</button>
+    <div ng-repeat="room in room.rooms" class="rooms">
+        <a ng-click = "$parent.room.selectedRoom = room.room" class="roomNames">{{room.room}}</a>
+            
+    </div>
+    </div>
+    <div class="messages">
+        Selected Room
+        <div>{{room.selectedRoom}}</div>
+    </div>
 </section>

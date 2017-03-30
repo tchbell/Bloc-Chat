@@ -18,4 +18,51 @@ body{
     text-decoration:none;
 }
 
+/*home template */
 
+.chatBtn{
+    margin:10px 0 0 10px;
+}
+
+.messages{
+    float:right;
+    height:100%;
+    width:80%;
+    background-color:aquamarine;
+    padding:10px;
+}
+
+.chatRooms{
+    float:left;
+    color:white;
+    background-color:darkgray;
+    height:100%;
+    width:20%;
+}
+
+.chatBtn{
+    color:black;
+}
+.main{
+    height:500px;
+    padding:10px;
+    margin:10px;
+}
+
+.rooms{
+    padding:5px;
+    margin:5px;
+    font-size:1.5em;
+}
+
+.roomNames{
+    color:white;
+}
+
+.roomNames:hover{
+    border:1px solid white;
+    color:white;
+    padding:4px;
+    text-decoration:none;
+    cursor:pointer;
+}
