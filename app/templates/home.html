@@ -3,12 +3,16 @@
         <div class="chatRooms">
         <button ng-click = "room.open('sm')" class="chatBtn">New Chat Room</button>
     <div ng-repeat="room in room.rooms" class="rooms">
-        <a ng-click = "$parent.room.selectedRoom = room.room" class="roomNames">{{room.room}}</a>
-            
+        <a ng-click = "$parent.room.selectedRoom = room.room; $parent.room.selectedRoomId = room.$id;" class="roomNames">{{room.room}}</a>
     </div>
     </div>
     <div class="messages">
         Selected Room
         <div>{{room.selectedRoom}}</div>
+        <div>{{room.selectedRoomId}}</div>
+        </br>
+        <div ng-repeat="room in room.getMessages">
+            <div>{{room.content}}</div>
+        </div>
     </div>
 </section>

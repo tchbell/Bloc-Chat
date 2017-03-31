@@ -1,8 +1,15 @@
 (function () {
-    function RoomCtrl(Room, $uibModal, $log, $document) {
+    function RoomCtrl(Messages, Room, $uibModal, $log, $document) {
         this.rooms = Room.all;
         this.roomAdd = Room.roomAdd;
         this.selectedRoom="None Selected";
+        this.selectedRoomId="None";
+        this.getMessages = Messages.getByRoomId(this.selectedRoomId);
+        
+        
+
+
+
         
         
         
@@ -26,5 +33,5 @@
     
     angular
         .module('blocChat')
-        .controller('RoomCtrl', ['Room', '$uibModal', '$log', '$document', RoomCtrl]);
+        .controller('RoomCtrl', ['Messages', 'Room', '$uibModal', '$log', '$document', RoomCtrl]);
 })();
