@@ -3,7 +3,8 @@
         <div class="chatRooms">
         <button ng-click = "room.open('sm')" class="chatBtn">New Chat Room</button>
     <div ng-repeat="room in room.rooms" class="rooms">
-        <a ng-click = "$parent.room.selectedRoom = room.room; $parent.room.selectedRoomId = room.$id;" class="roomNames">{{room.room}}</a>
+        <!-- I want whenever I click a new chat room to have the getMessages function parameter updated with the room id that was selected. Problem is I don't know how to call it properly-->
+        <a ng-click = "$parent.room.selectedRoom = room.room; $parent.room.selectedRoomId = room.$id; $parent.room.getMessages = $parent.Messages.getByRoomId($parent.room.selectedRoomId)" class="roomNames">{{room.room}}</a>
     </div>
     </div>
     <div class="messages">

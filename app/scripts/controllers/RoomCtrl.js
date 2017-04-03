@@ -3,7 +3,7 @@
         this.rooms = Room.all;
         this.roomAdd = Room.roomAdd;
         this.selectedRoom="None Selected";
-        this.selectedRoomId="None";
+        this.selectedRoomId="-KgN0RlQWPeuw2QBEPfD";
         this.getMessages = Messages.getByRoomId(this.selectedRoomId);
         
         
