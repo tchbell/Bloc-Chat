@@ -2,13 +2,18 @@
     function RoomCtrl(Messages, Room, $uibModal, $log, $document) {
         this.rooms = Room.all;
         this.roomAdd = Room.roomAdd;
-        this.selectedRoom="None Selected";
-        this.selectedRoomId="-KgN0RlQWPeuw2QBEPfD";
-        this.getMessages = Messages.getByRoomId(this.selectedRoomId);
+        this.selectedRoom="None";
+        this.selectedRoomId="";
+        this.getMessages = function(roomId){
+            this.roomMessages = Messages.getByRoomId(roomId);
+        };
+        this.roomMessages = this.getMessages(this.selectedRoomId);
         
-        
-
-
+        this.select = function(room){
+            this.selectedRoom=room.room;
+            this.selectedRoomId=room.$id;
+            this.getMessages(this.selectedRoomId);
+        };
 
         
         
