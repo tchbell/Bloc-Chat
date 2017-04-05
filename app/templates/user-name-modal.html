@@ -1,0 +1,10 @@
+<div class="modal-header">
+    <h2 class="modal-title">Set a username</h2>
+</div>
+<div class="modal-body">
+    <form name="userForm">
+        Set a username
+        <input type="text"  ng-model="user.userName" placeholder="Create Name" ng-model="user.userName" required/>
+        <button type="submit" ng-disabled="userForm.$invalid" ng-click="user.setUserName(user.userName)" >Submit</button>
+    </form>
+</div>

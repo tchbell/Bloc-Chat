@@ -18,22 +18,13 @@
             controllerAs:'room',
             templateUrl:'/templates/home.html'
         });
-        /*
-            .state('modal',{
-            url:'/new-room',
-            controller:'ModalCtrl',
-            controllerAs:'modal',
-            templateUrl:'/templates/modal.html'
-        });
-        */
-        
 
     }
     
     
     
     angular
-        .module('blocChat', ['ui.router','firebase', 'ui.bootstrap', 'ngAnimate'])
+        .module('blocChat', ['ui.router','firebase', 'ui.bootstrap', 'ngAnimate','ngCookies'])
         .config(config);
     
 })();
