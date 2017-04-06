@@ -4,7 +4,6 @@
         <button ng-click = "room.open('sm')" class="chatBtn">New Chat Room</button>
     <div ng-repeat="room in room.rooms" class="rooms">
         <a ng-click = "$parent.room.select(room)"class="roomNames">{{room.room}}</a>
-        <!--$parent.room.getMessages(room.$id)-->
     </div>
     </div>
     <div class="messages">
@@ -14,5 +13,10 @@
         <div ng-repeat="room in room.roomMessages">
             <div>{{room.content}}</div>
         </div>
+        <div class="newMessage">
+            <input type="text" class="message" placeholder = "Enter Message" ng-model ="room.newMessage">
+            <button type="submit" ng-click = "room.send(room.newMessage)">Send</button>
+            <div ng-model= room.setTime>{{room.time | date:'hh:mm:ss'}}</div>
+        </div>    
     </div>
 </section>
