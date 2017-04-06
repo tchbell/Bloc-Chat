@@ -9,6 +9,8 @@
     <div class="messages">
         Selected Room:
         <div>{{room.selectedRoom}}</div>
+        Logged in as:
+        <div>{{room.userName}}</div>
         </br>
         <div ng-repeat="room in room.roomMessages">
             <div>{{room.content}}</div>
@@ -16,7 +18,6 @@
         <div class="newMessage">
             <input type="text" class="message" placeholder = "Enter Message" ng-model ="room.newMessage">
             <button type="submit" ng-click = "room.send(room.newMessage)">Send</button>
-            <div ng-model= room.setTime>{{room.time | date:'hh:mm:ss'}}</div>
         </div>    
     </div>
 </section>

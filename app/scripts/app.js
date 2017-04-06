@@ -9,6 +9,8 @@
         $stateProvider
             .state('landing',{
             url:'/',
+            controller:'RoomCtrl',
+            controllerAs:'room',
             templateUrl:'/templates/landing.html'
         })
         

@@ -8,6 +8,13 @@ body{
     
 }
 
+.loggedIn{
+    margin-bottom:5px;
+    text-align:center;
+
+    
+}
+
 .mainBtn{
     margin:0 auto;
     display:block;

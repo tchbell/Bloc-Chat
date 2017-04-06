@@ -15,6 +15,10 @@
 
             },
             
+            user: function(){
+                return $cookies.get('blocChatCurrentUser');
+            },
+            
             send: function(newMessage, roomId, time) {
                 //sets username stored in cookies
                 var user = $cookies.get('blocChatCurrentUser');
