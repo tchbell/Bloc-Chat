@@ -1,75 +1,61 @@
+/*Index */
 body{
-    width:100%;
-    
+    background-color:#000 !important;
 }
 
-.mainHeadLine{
-    text-align:center;
-    
+/*Home*/
+
+.mainHeader{
+    font-family: 'Kaushan Script', cursive;
+    font-size:64px;
+    color:#333;
 }
 
-.loggedIn{
-    margin-bottom:5px;
-    text-align:center;
+/*Chat Room*/
 
-    
+section.chatRooms{
+    height:450px;
+    position: relative;
+
 }
 
-.mainBtn{
-    margin:0 auto;
-    display:block;
-    padding:5px;
+section.chatRooms .roomHeader{
+    color:#333;
 }
 
-.mainBtnLink{
-    text-decoration:none;
+section.chatRooms .rooms{
+    font-size:24px;
 }
 
-/*home template */
-
-.chatBtn{
-    margin:10px 0 0 10px;
-}
-
-.messages{
-    float:right;
-    height:100%;
-    width:80%;
-    background-color:aquamarine;
-    padding:10px;
-}
-
-.chatRooms{
-    float:left;
-    color:white;
-    background-color:darkgray;
-    height:100%;
-    width:20%;
-}
-
-.chatBtn{
-    color:black;
-}
-.main{
-    height:500px;
-    padding:10px;
-    margin:10px;
-}
-
-.rooms{
-    padding:5px;
+section.chatRooms .newRoomBtn{
+    position:absolute;
+    bottom:0;
     margin:5px;
-    font-size:1.5em;
 }
 
-.roomNames{
-    color:white;
+/*Messages*/
+
+section.messages{
+    padding:20px 5px 10px;
+    background-color:#FFF;
+    margin-top:20px;
+    margin-right:10px;
+    height:450px;
+    position:relative;
 }
 
-.roomNames:hover{
-    border:1px solid white;
-    color:white;
-    padding:4px;
-    text-decoration:none;
-    cursor:pointer;
+section.messages .selectedRoom{
+    font-size:24px;
+}
+
+section.messages .message{
+    position:absolute;
+    bottom:0;
+    margin:5px 5px 10px;
+}
+
+section.messages .btnSend{
+    position:absolute;
+    bottom:0;
+    margin:5px 5px 10px 210px;
 }

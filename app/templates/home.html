@@ -1,23 +1,33 @@
-<section class="main">
-    <h1 class="mainHeader">Bloc Chat</h1>
-        <div class="chatRooms">
-        <button ng-click = "room.open('sm')" class="chatBtn">New Chat Room</button>
-    <div ng-repeat="room in room.rooms" class="rooms">
-        <a ng-click = "$parent.room.select(room)"class="roomNames">{{room.room}}</a>
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="mainHeader">Bloc Chat</h1>
     </div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+            <section class="chatRooms">
+                <h2 class="roomHeader">Chat Rooms</h2>
+                <div ng-repeat="room in room.rooms" class="rooms">
+                    <a ng-click = "$parent.room.select(room)"class="roomNames">{{room.room}}</a>
+                </div>
+                    <button ng-click = "room.open('sm')" class="newRoomBtn btn">New Chat Room</button>
+            </section>
     </div>
-    <div class="messages">
-        Selected Room:
-        <div>{{room.selectedRoom}}</div>
-        Logged in as:
-        <div>{{room.userName}}</div>
-        </br>
-        <div ng-repeat="room in room.roomMessages">
-            <div>{{room.content}}</div>
+    <div class="col-md-9">
+        <section class="messages">
+             <div class= "selectedRoom">
+                Selected Room:  {{room.selectedRoom}} 
+            </div>
+            </br>
+            <div ng-repeat="room in room.roomMessages">
+                <div>{{room.content}}</div>
+            </div>
+            <form class="form-inline">
+                <div class="form-group newMessage">
+                    <input type="text" class="form-control message" placeholder = "Enter Message" ng-model ="room.newMessage" required>
+                    <button class= "btnSend btn" type="submit" ng-click = "room.send(room.newMessage)" ng-disabled = "room.selectedRoom == undefined">Send</button>
+                </div>
+            </form>            
         </div>
-        <div class="newMessage">
-            <input type="text" class="message" placeholder = "Enter Message" ng-model ="room.newMessage">
-            <button type="submit" ng-click = "room.send(room.newMessage)">Send</button>
-        </div>    
     </div>
-</section>
+</div>

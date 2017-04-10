@@ -7,15 +7,9 @@
         });
         
         $stateProvider
-            .state('landing',{
-            url:'/',
-            controller:'RoomCtrl',
-            controllerAs:'room',
-            templateUrl:'/templates/landing.html'
-        })
         
             .state('home',{
-            url:'/home',
+            url:'/',
             controller:'RoomCtrl',
             controllerAs:'room',
             templateUrl:'/templates/home.html'

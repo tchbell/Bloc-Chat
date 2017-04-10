@@ -9,7 +9,7 @@
         this.userName = Messages.user();
         
         //Setting Current Room
-        this.selectedRoom="None";
+        this.selectedRoom=undefined;
         this.selectedRoomId="";
         
         //Getting messages for current room
@@ -25,6 +25,7 @@
         };
         
         //Sending messages
+
         //var value = element(by.binding('example.value | date: "HH:mm:ss"'));
         
         this.time = new Date();
